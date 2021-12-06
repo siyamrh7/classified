@@ -9,7 +9,7 @@
     "dev":"nodemon index.js"
   },
   "engines": {
-    "node": "16.9.1"
+    "node": "^16.9.1"
   },
   "author": "",
   "license": "ISC",
