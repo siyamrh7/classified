@@ -4,5 +4,7 @@ const router=express.Router()
 
 router.post('/signup',registerCtrl)
 router.post('/signin',loginCtrl)
-
+router.get('/',(req,res)=>{
+    res.send("Server is running")
+})
 module.exports=router
