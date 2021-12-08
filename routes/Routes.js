@@ -1,9 +1,15 @@
 const express = require('express')
-const { registerCtrl, loginCtrl } = require('../controllers/AuthCtrl')
+const { registerEmailCtrl, loginEmailCtrl ,verifyEmailCtrl,registerPhoneCtrl,loginPhoneCtrl,verifyPhoneCtrl} = require('../controllers/AuthCtrl')
 const router = express.Router()
 
-router.post('/api/signup', registerCtrl)
-router.post('/api/signin', loginCtrl)
+router.post('/api/emailsignup', registerEmailCtrl)
+router.post('/api/phonesignup', registerPhoneCtrl)
+router.post('/api/emailsignin', loginEmailCtrl)
+router.post('/api/phonesignin', loginPhoneCtrl)
+
+router.post('/verifyphone', verifyPhoneCtrl)
+router.get('/verifyemail', verifyEmailCtrl)
+
 router.get('/', (req, res) => {
     res.send("Server is running")
 })

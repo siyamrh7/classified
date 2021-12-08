@@ -7,12 +7,20 @@ const userSchema=new mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
+        required:false
     },
+    phone:String,
     password:{
         type:String,
         required:true
+    },
+    emailToken:String,
+
+    isVerified:{
+        type:Boolean,
+        default:false
     }
+
 },{timestamps:true})
 
 const Users=mongoose.model('Users',userSchema)
