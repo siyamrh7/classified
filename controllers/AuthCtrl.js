@@ -35,7 +35,7 @@ const registerEmailCtrl = async (req, res) => {
             from: '"Classified Verification" <siyamcoder11@gmail.com>',
             to: user.email,
             subject: 'Confirm your classified registration',
-            html: `<h2>Hi ${user.name}, Please confirm your mail</h2> <br> <a href="http://${req.headers.host}/verifyemail?token=${user.emailToken}">Click here to verify</a>`
+            html: `<h2>Hi ${user.name}, Please confirm your mail</h2> <br> <a href="https://${req.headers.host}/verifyemail?token=${user.emailToken}">Click here to verify</a>`
         }
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
