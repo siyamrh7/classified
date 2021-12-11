@@ -1,3 +1,4 @@
+const { type } = require('express/lib/response')
 const mongoose=require('mongoose')
 
 const userSchema=new mongoose.Schema({
@@ -19,7 +20,13 @@ const userSchema=new mongoose.Schema({
     isVerified:{
         type:Boolean,
         default:false
-    }
+    },
+    posts:[
+        {
+            type:mongoose.Types.ObjectId
+        }
+        
+]
 
 },{timestamps:true})
 
