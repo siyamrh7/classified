@@ -24,7 +24,7 @@ router.get('/api/phoneget', PhoneGet)
 
 
 
-router.get('/',Authenticate, (req, res) => {
+router.get('/', (req, res) => {
     res.send("Server is running")
 })
 module.exports = router
